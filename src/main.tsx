@@ -1,9 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
+import NoAuthLandingPage from './pages/no_auth/NoAuthLandingPage'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <NoAuthLandingPage />
   </StrictMode>,
 )
