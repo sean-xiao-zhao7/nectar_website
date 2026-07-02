@@ -12,7 +12,10 @@ import MenuItem from '@mui/material/MenuItem';
 
 import MenuIcon from '@mui/icons-material/Menu';
 import AdbIcon from '@mui/icons-material/Adb';
+
 import { useState } from 'react';
+
+import mediumLogo from '../../../assets/images/icons/nectar_main_logo_medium.png';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -41,7 +44,9 @@ function LargeHeader() {
             <AppBar position="static">
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
-                        <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                        <IconButton sx={{ p: 0 }}>
+                            <Avatar alt="Nectar" src={mediumLogo} />
+                        </IconButton>
                         <Typography
                             variant="h6"
                             noWrap
@@ -57,7 +62,7 @@ function LargeHeader() {
                                 textDecoration: 'none',
                             }}
                         >
-                            Nectar Virtual Card
+                            Nectar
                         </Typography>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -127,7 +132,7 @@ function LargeHeader() {
                         <Box sx={{ flexGrow: 0 }}>
                             <Tooltip title="Open settings">
                                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                    <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                                    <Avatar alt="Remy Sharp" src='' />
                                 </IconButton>
                             </Tooltip>
                             <Menu
